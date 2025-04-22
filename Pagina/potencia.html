@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Gasto de Energia</title>
+  <link rel="stylesheet" href="../Estilos/base.css">
+  <link rel="stylesheet" href="../Estilos/layout.css">
+  <link rel="stylesheet" href="../Estilos/form.css">
+  <link rel="stylesheet" href="../Estilos/dark-mode.css">  
+  <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
+  </head>
+<body>
+  <div class="top-bar">
+    <a href="../index.html" class="menu-btn">🏠 Menu</a>
+  </div>
+  <div class="container">
+    <button id="toggle-dark">🌙 Modo Escuro</button>
+
+    <h1>Calculadora de Gasto de Energia</h1>
+
+    <label for="potencia">Potência do aparelho (Watts):</label>
+    <input type="number" id="potencia" />
+
+    <label for="horas">Horas de uso por dia:</label>
+    <input type="number" id="horas" />
+
+    <label for="dias">Dias de uso por mês:</label>
+    <input type="number" id="dias" />
+
+    <label for="estado">Selecione seu estado:</label>
+    <select id="estado"></select>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="../Dados/script.js"></script>
+</body>
+</html>

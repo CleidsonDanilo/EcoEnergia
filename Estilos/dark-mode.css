@@ -1,0 +1,55 @@
+/* Fundo e texto geral no modo escuro */
+body.dark {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  /* Container com sombra mais forte */
+  body.dark .container {
+    background: #2a2a2a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Label e resultado adaptados */
+  body.dark label,
+  body.dark #resultado {
+    background: #333;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+  
+  /* Inputs e selects escuros */
+  body.dark input,
+  body.dark select {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  /* Botões no modo escuro */
+  body.dark button {
+    background: #007d7e;
+  }
+  
+  body.dark button:hover {
+    background: #005e5e;
+  }
+  
+  /* Links de botões na home */
+  body.dark .botao-link {
+    background: #00635e;
+  }
+  
+  body.dark .botao-link:hover {
+    background: #004b47;
+  }
+  
+  /* Botão de menu adaptado */
+  body.dark .menu-btn {
+    background-color: #005e58;
+  }
+  
+  body.dark .menu-btn:hover {
+    background-color: #004843;
+  }
+  

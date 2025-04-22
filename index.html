@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConsumoCerto</title>
+  <link rel="stylesheet" href="Estilos/base.css">
+  <link rel="stylesheet" href="Estilos/layout.css">
+  <link rel="stylesheet" href="Estilos/form.css">
+  <link rel="stylesheet" href="Estilos/dark-mode.css">
+  <link rel="stylesheet" href="Estilos/home.css"> <!-- Apenas na home -->
+</head>
+<body>
+  <div class="container">
+    <button id="toggle-dark">🌙 Modo Escuro</button>
+
+    <h1>Bem-vindo ao ConsumoCerto ⚡</h1>
+
+    <p>
+      Nosso site te ajuda a entender e controlar os seus gastos com energia elétrica de forma simples, rápida e acessível.
+    </p>
+
+    <ul>
+      <li>💡 Calcule quanto um eletrodoméstico gasta por mês.</li>
+      <li>📈 Descubra quanto você vai pagar com base no consumo atual.</li>
+      <li>🌎 Compatível com todos os estados do Brasil (com tarifas locais).</li>
+      <li>🌓 Modo claro e escuro, ideal pra qualquer hora do dia.</li>
+    </ul>
+
+    <h2>Escolha uma opção abaixo:</h2>
+
+    <div class="botoes-home">
+      <a href="Pagina/potencia.html" class="botao-link">🔌 Calcular pelo aparelho</a>
+      <a href="Pagina/conta.html" class="botao-link">📊 Calcular pela conta</a>
+    </div>
+  </div>
+
+  <script>
+    const btnToggle = document.getElementById('toggle-dark');
+    btnToggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      btnToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+      localStorage.setItem('modoEscuro', isDark);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
+      if (modoSalvo) {
+        document.body.classList.add('dark');
+        btnToggle.textContent = '☀️ Modo Claro';
+      } else {
+        btnToggle.textContent = '🌙 Modo Escuro';
+      }
+    });
+  </script>
+
+<!-- Rodapé com informações do desenvolvedor -->
+<footer class="footer">
+  <p>Desenvolvido por <strong>Cleidson Danilo</strong></p>
+  <div class="social-links">
+    <a href="https://github.com/CleidsonDanilo" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.instagram.com/danilodev_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+</footer>
+</body>
+</html>

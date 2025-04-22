@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcular Conta de Energia</title>
+  <link rel="stylesheet" href="../Estilos/base.css">
+  <link rel="stylesheet" href="../Estilos/layout.css">
+  <link rel="stylesheet" href="../Estilos/form.css">
+  <link rel="stylesheet" href="../Estilos/dark-mode.css">
+  <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
+
+  </head>
+<body>
+    <a href="../index.html" class="menu-btn">🏠 Menu</a>
+  <div class="container">
+    <button id="toggle-dark">🌙 Modo Escuro</button>
+    <h1>Calcular Conta de Energia</h1>
+
+    <label for="consumo">Consumo registrado (kWh):</label>
+    <input type="number" id="consumo" />
+
+    <label for="estado">Selecione seu estado:</label>
+    <select id="estado"></select>
+
+    <button onclick="calcularConta()">Calcular Valor</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="../Dados/script-conta.js"></script>
+</body>
+</html>

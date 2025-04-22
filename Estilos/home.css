@@ -1,0 +1,52 @@
+/* Lista de vantagens ou instruções */
+.container ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  .container ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Grupo de botões com espaçamento */
+  .botoes-home {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Botões de navegação principais */
+  .botao-link {
+    display: block;
+    background: #00978f;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .botao-link:hover {
+    background: #007a75;
+  }
+  
+  /* Botão para voltar ao menu */
+  .menu-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    background-color: #00978f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-btn:hover {
+    background-color: #007a75;
+  }
+  

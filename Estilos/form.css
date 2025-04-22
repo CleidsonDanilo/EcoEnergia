@@ -1,0 +1,76 @@
+/* Estilo para rótulos de inputs */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Inputs e selects uniformizados */
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dce3e8;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Destaque quando focado */
+  input:focus,
+  select:focus {
+    border-color: #00978f;
+    outline: none;
+  }
+  
+  /* Botão padrão */
+  button {
+    width: 100%;
+    background: #00978f;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Hover do botão */
+  button:hover {
+    background: #007d7e;
+  }
+  
+  /* Resultado do cálculo */
+  #resultado {
+    margin-top: 20px;
+    background: #e6f3f2;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cde7e5;
+    color: #007d7e;
+    font-size: 16px;
+  }
+  
+  /* Botão de alternância de modo escuro */
+  #toggle-dark {
+    background: none;
+    border: 2px solid #00978f;
+    color: #00978f;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  #toggle-dark:hover {
+    background: #00978f;
+    color: white;
+  }
+  

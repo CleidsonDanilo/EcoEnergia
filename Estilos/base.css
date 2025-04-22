@@ -1,0 +1,67 @@
+/* Reset básico para manter consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo base do corpo da página */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8; /* Fundo neutro e claro */
+    padding: 40px;
+    color: #333;
+    transition: background 0.3s, color 0.3s; /* Suavidade nas mudanças de modo escuro */
+  }
+
+  /* Rodapé geral */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+  color: #3d3d3d;
+  background-color: #f0f5f4;
+  border-top: 1px solid #cce0dd;
+  border-radius: 8px;
+}
+
+/* Links sociais com ícones */
+.footer .social-links a {
+  color: #00978f;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.footer .social-links i {
+  margin-right: 8px; /* Espaçamento entre ícone e texto */
+  font-size: 18px; /* Tamanho do ícone */
+}
+
+.footer .social-links a:hover {
+  color: #007a75;
+}
+
+/* Modo escuro para o rodapé */
+body.dark .footer {
+  background-color: #1d1c1c;
+  color: #ddd;
+  border-top: 1px solid #333;
+}
+
+body.dark .footer .social-links a {
+  color: #7ee7dc;
+}
+
+body.dark .footer .social-links a:hover {
+  color: #48cfc0;
+}
+
+body.dark .footer .social-links i {
+  color: #7ee7dc; /* Mudança de cor no ícone no modo escuro */
+}
