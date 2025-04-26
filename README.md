@@ -1,5 +1,6 @@
 
 # ⚡ EcoEnergia
+![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)
 
 O **EcoEnergia** é uma ferramenta web desenvolvida para ajudar usuários a **entender e calcular o consumo de energia elétrica** de forma simples, visual e personalizada. Com base nas tarifas de energia elétrica dos estados brasileiros, o EcoEnergia permite estimar o valor da conta de luz ou calcular o consumo de eletrodomésticos de maneira prática.
 
@@ -66,5 +67,6 @@ As tarifas são baseadas em dados médios por estado no Brasil. Os valores podem
 
 ---
 
-© EcoEnergia 2025 - Todos os direitos reservados.  
-*Feito com 💚 e ⚡ por Cleidson Danilo.*
+## Licença
+Este projeto está licenciado sob a [Licença Apache 2.0](LICENSE).  
+
