@@ -29,28 +29,28 @@
       <li><a href="Pagina/sobre.html">Sobre</a></li>
       <li><Contato href="Pagina/Contato.html">Contato</a></li>
     </ul>
-    <button id="toggle-dark">🌙 Modo Escuro</button>
+    <button id="toggle-dark">🌓</button>
 
   </nav>
   <div class="container">
-    <h1>Bem-vindo ao EcoEnergia ⚡</h1>
+    <h1>Bem-vindo ao EcoEnergia</h1>
 
     <p>
       Nosso site te ajuda a entender e controlar os seus gastos com energia elétrica de forma simples, rápida e acessível.
     </p>
 
     <ul>
-      <li>💡 Calcule quanto um eletrodoméstico gasta por mês.</li>
-      <li>📈 Descubra quanto você vai pagar com base no consumo atual.</li>
-      <li>🌎 Compatível com todos os estados do Brasil (com tarifas locais).</li>
-      <li>🌓 Modo claro e escuro, ideal pra qualquer hora do dia.</li>
+      <li> Calcule quanto um eletrodoméstico gasta por mês.</li>
+      <li> Descubra quanto você vai pagar com base no consumo atual.</li>
+      <li> Compatível com todos os estados do Brasil (com tarifas locais).</li>
+      <li> Modo claro e escuro, ideal pra qualquer hora do dia.</li>
     </ul>
 
     <h2>Escolha uma opção abaixo:</h2>
 
     <div class="botoes-home">
-      <a href="Pagina/potencia.html" class="botao-link">🔌 Calcular pelo aparelho</a>
-      <a href="Pagina/conta.html" class="botao-link">📊 Calcular pela conta</a>
+      <a href="Pagina/potencia.html" class="botao-link"> Calcular pelo aparelho</a>
+      <a href="Pagina/conta.html" class="botao-link"> Calcular pela conta</a>
     </div>
   </div>
 
@@ -58,7 +58,7 @@
     const btnToggle = document.getElementById('toggle-dark');
     btnToggle.addEventListener('click', () => {
       const isDark = document.body.classList.toggle('dark');
-      btnToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+      btnToggle.textContent = isDark ? '🌓' : '🌓';
       localStorage.setItem('modoEscuro', isDark);
     });
 
@@ -66,9 +66,9 @@
       const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
       if (modoSalvo) {
         document.body.classList.add('dark');
-        btnToggle.textContent = '☀️ Modo Claro';
+        btnToggle.textContent = '🌓';
       } else {
-        btnToggle.textContent = '🌙 Modo Escuro';
+        btnToggle.textContent = '🌓';
       }
     });
   </script>
