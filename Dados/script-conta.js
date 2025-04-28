@@ -35,23 +35,3 @@ function calcularConta() {
     <p>Valor estimado: <strong>R$ ${custo.toFixed(2)}</strong></p>
   `;
 }
-
-// Dark mode reutilizado
-const btnToggle = document.getElementById('toggle-dark');
-btnToggle.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark');
-  btnToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
-  localStorage.setItem('modoEscuro', isDark);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
-  if (modoSalvo) {
-    document.body.classList.add('dark');
-    btnToggle.textContent = '☀️ Modo Claro';
-  } else {
-    btnToggle.textContent = '🌙 Modo Escuro';
-  }
-
-  carregarEstados();
-});
