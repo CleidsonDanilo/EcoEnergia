@@ -10,11 +10,27 @@
   <link rel="stylesheet" href="../Estilos/form.css">
   <link rel="stylesheet" href="../Estilos/dark-mode.css">
   <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
+  <link rel="stylesheet" href="../Estilos/navbar.css"> <!-- Estilo específico para a navbar -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-VKCX92JMY4');
+  </script>
+  
   </head>
 <body>
-    <a href="../index.html" class="menu-btn">🏠 Menu</a>
-  <div class="container">
+  <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="Pagina/potencia.html">Calcular pelo aparelho</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="Pagina/sobre.html">Sobre</a></li>
+    </ul>  
+  </nav>
+    <div class="container">
     <button id="toggle-dark">🌙 Modo Escuro</button>
     <h1>Calcular Conta de Energia</h1>
 

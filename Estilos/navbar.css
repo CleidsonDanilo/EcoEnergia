@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #43a047; /* Cor de fundo da barra */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha verticalmente os itens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaço abaixo da barra */}
+.navbar ul {
+    list-style: none; /* Remove os marcadores */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+.navbar ul li {
+    display: inline;
+}
+.navbar ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+.navbar ul li a:hover {
+    background-color: #1b5e20; /* Cor ao passar o mouse */
+    padding: 8px 16px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */   
+}
