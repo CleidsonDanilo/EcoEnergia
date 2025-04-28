@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback - EcoEnergia</title>
+    <link rel="stylesheet" href="../Estilos/contato.css">
+    <link rel="stylesheet" href="../Estilos/navbar.css">
+    <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../Pagina/potencia.html">Calcular pelo aparelho</a></li>
+            <li><a href="../Pagina/conta.html">Calcular pela conta</a></li>
+            <li><a href="../Pagina/sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Fale Conosco</h1>
+    </header>
+
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Tem dúvidas, sugestões ou quer enviar um feedback? Preencha o formulário abaixo e responderemos o mais breve possível!</p>
+
+        <form action="https://formsubmit.co/cleidsondanilo18@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+
+            <!-- Evitar spam -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Redirecionar para uma página de sucesso -->
+            <input type="hidden" name="_next" value="https://seusite.github.io/sucesso.html">
+        </form>
+
+        <h2>Outros Canais</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/danilodev_/" target="_blank">Instagram</a></li>
+            <li><a href="https://github.com/CleidsonDanilo" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
+        <p>Feito por <strong>Cleidson Danilo</strong> | Versão Beta 1.0</p>
+    </footer>
+</body>
+</html>
