@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #43a047; /* Cor de fundo da barra */
+    background-color: #2e7d32; /* Cor de fundo da barra */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between; /* Espaço entre os itens */
@@ -27,4 +27,30 @@
     background-color: #1b5e20; /* Cor ao passar o mouse */
     padding: 8px 16px; /* Espaçamento interno */
     border-radius: 8px; /* Bordas arredondadas */   
+}
+/* Estilo básico do botão */
+#toggle-dark {
+    background-color: #43a047; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    display: inline-block; /* Garante que o botão não se estique */
+    width: auto; /* Evita que o botão ocupe largura total */
+}
+
+/* Efeito ao passar o mouse */
+#toggle-dark:hover {
+    background-color: #2e7d32; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+/* Efeito ao clicar */
+#toggle-dark:active {
+    background-color: #1b5e20; /* Cor ainda mais escura ao clicar */
+    transform: scale(0.95); /* Leve redução no tamanho */
 }

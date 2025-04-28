@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
-    color: #2e7d32;
+    background: linear-gradient(to bottom, #d0f0c0, #ffffff); /* Um verde mais forte */
+    color: #333333; /* Cor do texto */
     padding: 20px;
 }
 header, footer {
@@ -32,7 +32,7 @@ footer {
     margin-top: 20px;
 }
 h1, h2 {
-    color: #1b5e20;
+    color: #1b5e20; /* Cor do título */
 }
 .container {
     max-width: 800px;
