@@ -30,9 +30,7 @@
         <li><a href="../Pagina/contato.html">Contato</a></li>  
     </ul>
 </nav>
-<!-- Conteúdo da página -->
-<script src="../Dados/dark-mode.js"></script>
-<script src="../Dados/estados.js"></script>
+
 
     <div class="container">
     <h1>Calcular Conta de Energia</h1>
@@ -43,8 +41,8 @@
     <label for="estado">Selecione seu estado:</label>
     <select id="estado"></select>
 
-    <button onclick="calcularConta()">Calcular Valor</button>
-
+    <script type="module" src="../Scripts/calcularConta.js"></script>
+    <button onclick="calcularConta()">Calcular</button> 
     <div id="resultado"></div>
   </div> 
 </body>
