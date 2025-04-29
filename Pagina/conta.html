@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="../Estilos/base.css">
   <link rel="stylesheet" href="../Estilos/layout.css">
   <link rel="stylesheet" href="../Estilos/form.css">
-  <link rel="stylesheet" href="../Estilos/dark-mode.css">
-  <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
   <link rel="stylesheet" href="../Estilos/navbar.css"> <!-- Estilo específico para a navbar -->
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,14 +25,15 @@
     <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="../Pagina/potencia.html">Calcular pelo aparelho</a></li>
-        <li><a href="../Pagina/conta.html">Calcular pela conta</a></li>
+        <li><a href="../Pagina/conta.html"class="active">Calcular pela conta</a></li>
         <li><a href="../Pagina/sobre.html">Sobre</a></li>
         <li><a href="../Pagina/contato.html">Contato</a></li>  
     </ul>
-    <button id="toggle-dark">🌓</button>
 </nav>
 <!-- Conteúdo da página -->
 <script src="../Dados/dark-mode.js"></script>
+<script src="../Dados/estados.js"></script>
+
     <div class="container">
     <h1>Calcular Conta de Energia</h1>
 
@@ -46,6 +46,6 @@
     <button onclick="calcularConta()">Calcular Valor</button>
 
     <div id="resultado"></div>
-  </div>
+  </div> 
 </body>
 </html>

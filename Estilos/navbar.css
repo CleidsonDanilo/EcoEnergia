@@ -54,3 +54,7 @@
     background-color: #1b5e20; /* Cor ainda mais escura ao clicar */
     transform: scale(0.95); /* Leve redução no tamanho */
 }
+.navbar ul li a.active {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+}

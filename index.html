@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoEnergia</title>
   <link rel="icon" type="image/x-icon" href="imagem/favicon.ico">
-  <link rel="stylesheet" href="Estilos/base.css">
-  <link rel="stylesheet" href="Estilos/layout.css">
-  <link rel="stylesheet" href="Estilos/form.css">
-  <link rel="stylesheet" href="Estilos/dark-mode.css">
-  <link rel="stylesheet" href="Estilos/home.css"> <!-- Apenas na home -->
-  <link rel="stylesheet" href="Estilos/navbar.css"> <!-- Estilo específico para a navbar -->
+  <link rel="stylesheet" href="../Estilos/estilos.css">
+  <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
+  <link rel="stylesheet" href="../Estilos/navbar.css"> <!-- Estilo específico para a navbar -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,19 +20,17 @@
   </script>
   
 </head>
+
 <body>
   <nav class="navbar">
     <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../Pagina/potencia.html">Calcular pelo aparelho</a></li>
-        <li><a href="../Pagina/conta.html">Calcular pela conta</a></li>
-        <li><a href="../Pagina/sobre.html">Sobre</a></li>
-        <li><a href="../Pagina/contato.html">Contato</a></li>  
+        <li><a href="../index.html"class="active">Início</a></li>
+        <li><a href="Pagina/potencia.html">Calcular pelo aparelho</a></li>
+        <li><a href="Pagina/conta.html">Calcular pela conta</a></li>
+        <li><a href="Pagina/sobre.html">Sobre</a></li>
+        <li><a href="Pagina/Contato.html">Contato</a></li>  
     </ul>
-    <button id="toggle-dark">🌓</button>
-</nav>
-<!-- Conteúdo da página -->
-<script src="../Dados/dark-mode.js"></script>
+    </nav>
   <div class="container">
     <h1>Bem-vindo ao EcoEnergia</h1>
 
@@ -55,26 +52,20 @@
       <a href="Pagina/conta.html" class="botao-link"> Calcular pela conta</a>
     </div>
   </div>
-
   <script>
-    const btnToggle = document.getElementById('toggle-dark');
-    btnToggle.addEventListener('click', () => {
-      const isDark = document.body.classList.toggle('dark');
-      btnToggle.textContent = isDark ? '🌓' : '🌓';
-      localStorage.setItem('modoEscuro', isDark);
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
-      if (modoSalvo) {
-        document.body.classList.add('dark');
-        btnToggle.textContent = '🌓';
-      } else {
-        btnToggle.textContent = '🌓';
-      }
+    const toggle = document.getElementById('toggle-dark');
+    const body = document.body;
+  
+    // Ativar modo escuro salvo
+    if (localStorage.getItem('darkMode') === 'true') {
+      body.classList.add('dark-mode');
+    }
+  
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
     });
   </script>
-
 <!-- Rodapé com informações do desenvolvedor -->
 <footer class="footer">
   <p>Desenvolvido por <strong>Cleidson Danilo</strong></p>

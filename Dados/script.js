@@ -48,24 +48,3 @@ function calcular() {
 }
 
 carregarEstados();
-
-const btnToggle = document.getElementById('toggle-dark');
-
-btnToggle.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark');
-  btnToggle.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro';
-
-  // Salvar preferência no localStorage
-  localStorage.setItem('modoEscuro', isDark);
-});
-
-// Ao carregar a página, verifica se o modo escuro estava ativado
-window.addEventListener('DOMContentLoaded', () => {
-  const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
-  if (modoSalvo) {
-    document.body.classList.add('dark');
-    btnToggle.textContent = '☀️ Modo Claro';
-  } else {
-    btnToggle.textContent = '🌙 Modo Escuro';
-  }
-});

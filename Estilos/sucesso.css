@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #d0f0c0, #ffffff);
+    color: #333333;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    background-color: #c8e6c9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #1b5e20;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    color: #1b5e20;
+    margin-top: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.botao-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #43a047;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #2e7d32;
+}
+
+footer {
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

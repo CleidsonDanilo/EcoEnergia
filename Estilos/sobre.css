@@ -38,3 +38,10 @@ h1, h2 {
     max-width: 800px;
     margin: auto;
 }
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+p strong {
+    color: #388e3c; /* Cor do texto em negrito */
+}
