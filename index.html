@@ -1,78 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoEnergia</title>
-  <link rel="icon" type="image/x-icon" href="imagem/favicon.ico">
-  <link rel="stylesheet" href="../Estilos/estilos.css">
-  <link rel="stylesheet" href="../Estilos/home.css"> <!-- Apenas na home -->
-  <link rel="stylesheet" href="../Estilos/navbar.css"> <!-- Estilo específico para a navbar -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VKCX92JMY4');
-  </script>
-  
-</head>
-
-<body>
-  <nav class="navbar">
-    <ul>
-        <li><a href="../index.html"class="active">Início</a></li>
-        <li><a href="Pagina/potencia.html">Calcular pelo aparelho</a></li>
-        <li><a href="Pagina/conta.html">Calcular pela conta</a></li>
-        <li><a href="Pagina/sobre.html">Sobre</a></li>
-        <li><a href="Pagina/Contato.html">Contato</a></li>  
-    </ul>
-    </nav>
-  <div class="container">
-    <h1>Bem-vindo ao EcoEnergia</h1>
-
-    <p>
-      Nosso site te ajuda a entender e controlar os seus gastos com energia elétrica de forma simples, rápida e acessível.
-    </p>
-
-    <ul>
-      <li> Calcule quanto um eletrodoméstico gasta por mês.</li>
-      <li> Descubra quanto você vai pagar com base no consumo atual.</li>
-      <li> Compatível com todos os estados do Brasil (com tarifas locais).</li>
-      <li> Modo claro e escuro, ideal pra qualquer hora do dia.</li>
-    </ul>
-
-    <h2>Escolha uma opção abaixo:</h2>
-
-    <div class="botoes-home">
-      <a href="Pagina/potencia.html" class="botao-link"> Calcular pelo aparelho</a>
-      <a href="Pagina/conta.html" class="botao-link"> Calcular pela conta</a>
-    </div>
-  </div>
-  <script>
-    const toggle = document.getElementById('toggle-dark');
-    const body = document.body;
-  
-    // Ativar modo escuro salvo
-    if (localStorage.getItem('darkMode') === 'true') {
-      body.classList.add('dark-mode');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site em Manutenção</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #16720a;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 100px 20px;
     }
-  
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-    });
-  </script>
-<!-- Rodapé com informações do desenvolvedor -->
-<footer class="footer">
-  <p>Desenvolvido por <strong>Cleidson Danilo</strong></p>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://www.instagram.com/danilodev_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-  </div>
-</footer>
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .icon {
+      font-size: 5em;
+      color: #20d6c7;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">🔧</div>
+  <h1>Estamos em manutenção</h1>
+  <p>Nosso site está passando por reparos para melhor atendê-lo e novas atualizações.<br>
+     Voltaremos em breve. Agradecemos pela sua compreensão.</p>
 </body>
 </html>
