@@ -6,22 +6,12 @@ body {
     padding: 20px;
 }
 
-header, footer {
+h1 {
     text-align: center;
     padding: 10px;
-}
-
-header {
-    background-color: #c8e6c9;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #1b5e20;
+    margin: 5;
+    font-size: 3em;
+    color: #047a0c;
 }
 
 .container {
@@ -31,6 +21,9 @@ header h1 {
 
 h2 {
     color: #1b5e20;
+    margin-top: 20px;
+    margin-bottom: 10px; /* Adiciona um espaço consistente abaixo do título */
+
 }
 
 form {
@@ -53,7 +46,7 @@ textarea {
 
 button[type="submit"] {
     padding: 10px;
-    background-color: #43a047;
+    background-color: #0c8a13;
     color: white;
     border: none;
     border-radius: 8px;
@@ -67,23 +60,24 @@ button[type="submit"]:hover {
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+    padding-left: 20px; /* Ajusta o alinhamento horizontal */
+    margin: 0; /* Remove margens extras */
+    list-style-type: disc; /* Adiciona marcadores, se necessário */
 }
 
 ul li a {
-    color: #2e7d32;
+    color: #19bb13;
     text-decoration: none;
     font-weight: bold;
+    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+
 }
 
-ul li a:hover {
-    text-decoration: underline;
-}
 
 footer {
-    background-color: #c8e6c9;
+    text-align: center;
     padding: 10px;
+    background-color: #c8e6c9;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 }

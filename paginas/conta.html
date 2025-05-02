@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcular Conta de Energia</title>
+
+  <link rel="stylesheet" href="../estiloEscuro/darkconta.css"/>
+  <link rel="stylesheet" href="../estilos/sobre.css"/>
+  <link rel="stylesheet" href="../estilos/navbar.css" />
+
+  <style>
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .form-group {
+      align-items: center;
+      margin-bottom:20px;
+      gap: 20px;
+    }
+
+    .form-group label {
+      width: 250px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 5;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #1b5e20;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    button:active {
+      background-color: #145a14;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      color: #000000;
+      border: 2px solid #388e3c;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    
+  </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VKCX92JMY4');
+  </script>
+<body>
+<nav class="navbar">
+    <a href="../index.html" class="logo">EcoEnergia</a>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../paginas/potencia.html">Calcular potencia</a></li>
+      <li><a href="../paginas/conta.html" class="nav-link ativo">Calcular conta</a></li>
+      <li><a href="../paginas/sobre.html">Sobre</a></li>
+      <li><a href="../paginas/contato.html">Contato</a></li>
+    </ul>
+    <button id="toggle-dark">Modo escuro 🌒</button>
+  </nav>
+  <div class="container">
+    <h1>Calcular Conta de Energia</h1>
+
+    <div class="form-group">
+      <label for="consumo">Consumo registrado (kWh):</label>
+      <input type="number" id="consumo" />
+    </div>
+
+    <div class="form-group">
+      <label for="estado">Selecione seu estado:</label>
+      <select id="estado"></select>
+    </div>
+
+    <button onclick="calcularConta()">Calcular Valor</button>
+
+    <div id="resultado"></div>
+  </div>
+  <footer>
+    <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
+    <p>desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
+      <p>
+        <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">LinkedIn</a> |
+        <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">Instagram</a>
+      </p>
+    </footer>
+  <script src="../Dados/scriptConta.js"></script>
+    <script src="../Dados/scriptAdicionais.js"></script>    
+</body>
+</html>

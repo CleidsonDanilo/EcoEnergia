@@ -1,0 +1,151 @@
+/* BOTÃO DE TOGGLE */
+#toggle-dark {
+    background: none;
+    border: 2px solid #f5f5f5;
+    color: #fcfcfc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  #toggle-dark:hover {
+    background: #161616;
+    color: white;
+  }
+  
+  /* Botão Dark no Modo Escuro */
+  body.dark #toggle-dark {
+    background: none;
+    border: 2px solid #01f8f8;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  body.dark #toggle-dark:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* MODO ESCURO: GERAL */
+  body.dark {
+    background: #2a2a2a; /* mesma cor do fundo do formulário */
+    color: #f0f0f0;
+  }
+  
+  body.dark .container {
+    background: #2a2a2a;
+    box-shadow: none; /* Remove a sombra do formulário */
+  }
+  
+  body.dark h1 {
+    text-align: left;
+      padding: 1px;
+      margin: 3;
+      font-size: 2em;
+      color: #00978f;
+    }
+  
+  
+  body.dark .container h2 {
+    color: #00978f;
+    margin-top: 20px;
+  }
+  body.dark .container p strong {
+    color: #74d8d3; /* Cor do texto em negrito */
+  }
+  
+  
+  /* MODO ESCURO: FORMULÁRIOS */
+  body.dark label {
+    color: #ffffff;
+  }
+  
+  body.dark input,
+  body.dark select {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  /* MODO ESCURO: BOTÕES */
+  body.dark button {
+    background: #007d7e;
+  }
+  
+  body.dark button:hover {
+    background: #005e5e;
+  }
+  
+  /* MODO ESCURO: RESULTADO */
+  body.dark #resultado {
+    margin-top: 20px;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cde7e5;
+    color: #cde7e5;
+    font-size: 16px;
+  }
+  
+  body.dark footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+  
+  /* MODO ESCURO: NAVEGAÇÃO */
+  body.dark .navbar {
+    background-color: #1b1b1b; /* Cor de fundo da barra de navegação no modo escuro */
+    border-color: #333; /* Cor da borda no modo escuro */
+  }
+  
+  body.dark .logo {
+    color: #74d8d3; /* Cor do texto do logo no modo escuro */
+  }
+  
+  body.dark .menu-toggle {
+    color: #74d8d3; /* Cor do botão de menu no modo escuro */
+  }
+  
+  body.dark .nav-links {
+    background-color: #1b1b1b; /* Cor de fundo do menu no modo escuro */
+  }
+  
+  body.dark .nav-links a {
+    color: #cde7e5; /* Cor dos links no modo escuro */
+  }
+  
+  body.dark .nav-links a:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse no modo escuro */
+  }
+  
+  body.dark .nav-links a.ativo {
+    background-color: rgba(116, 216, 211, 0.1); /* Cor de fundo do link ativo no modo escuro */
+    color: #74d8d3; /* Cor do texto do link ativo no modo escuro */
+  }
+  
+  /* TRANSIÇÃO SUAVE */
+  body.dark,
+  body.dark .container,
+  body.dark input,
+  body.dark select,
+  body.dark #resultado,
+  body.dark footer,
+  body.dark .navbar
+  body.dark .logo,
+  body.dark .menu-toggle,
+  body.dark .nav-links,
+  body.dark .nav-links a{
+    transition: background 0.2s, color 0.3s, border 0.3s;
+  }
+  

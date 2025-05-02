@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #d0f0c0, #ffffff); /* Um verde mais forte */
+    background: linear-gradient(to bottom, #d0f0c0, #ffffff);
     color: #333333; /* Cor do texto */
     padding: 20px;
 }
@@ -10,15 +10,16 @@ header, footer {
     padding: 10px;
 }
 header {
-    background-color: #c8e6c9;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #1b5e20;
+    text-align: center;
+    padding: 1px;
+    margin: 5;
+    font-size: 3em;
+    color: #047a0c;
 }
 header h2 {
     margin: 0;
@@ -26,10 +27,9 @@ header h2 {
     color: #388e3c;
 }
 footer {
-    background-color: #c8e6c9;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 h1, h2 {
     color: #1b5e20; /* Cor do título */
@@ -38,10 +38,19 @@ h1, h2 {
     max-width: 800px;
     margin: auto;
 }
-p {
+.container p {
     text-align: justify;
     line-height: 1.6;
-}
-p strong {
+  }
+  
+  .container p strong {
     color: #388e3c; /* Cor do texto em negrito */
-}
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e6f0e7;
+    border-radius: 10px;
+    margin-top: 20px;
+  }

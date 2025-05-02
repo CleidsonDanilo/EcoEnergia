@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>feedback - EcoEnergia</title>
-    <link rel="stylesheet" href="../Estilos/contato.css">
-    <link rel="stylesheet" href="../Estilos/navbar.css">
+    <link rel="stylesheet" href="../estilos/navbar.css">
+    <link rel="stylesheet" href="../estilos/contato.css">
+    <link rel="stylesheet" href="../estiloEscuro/dark.css">
+
     <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VKCX92JMY4');
+  </script>
+  <nav class="navbar">
+    <a href="../index.html"class="logo">EcoEnergia</a>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../paginas/potencia.html">Calcular potencia</a></li>
+      <li><a href="../paginas/conta.html">Calcular conta</a></li>
+      <li><a href="../paginas/sobre.html">Sobre</a></li>
+      <li><a href="../paginas/contato.html"class="nav-link ativo">Contato</a></li>
+    </ul>
+    <button id="toggle-dark">Modo escuro 🌒</button>
+</nav>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../Pagina/potencia.html">Calcular pelo aparelho</a></li>
-            <li><a href="../Pagina/conta.html">Calcular pela conta</a></li>
-            <li><a href="../Pagina/sobre.html">Sobre</a></li>
-            <li><a href="../Pagina/Contato.html" class="active">Contato</a></li> <!-- Exemplo: página atual -->
-        </ul>
-    </nav>
-    <!-- Conteúdo da página -->
-    <script src="../Dados/dark-mode.js"></script>
     <header>
         <h1>Fale Conosco</h1>
     </header>
@@ -38,9 +49,7 @@
             <!-- Evitar spam -->
             <input type="hidden" name="_captcha" value="false">
             <!-- Redirecionar para uma página de sucesso -->
-            <input type="hidden" name="_next" value="https://CleidsonDanilo/sucesso.html">
-        </form>
-
+            <input type="hidden" name="_next" value="https://CleidsonDanilo.github.io/ecoenergia/paginas/sucesso.html">
         <h2>Outros Canais</h2>
         <ul>
             <li><a href="https://www.instagram.com/danilodev_/" target="_blank">Instagram</a></li>
@@ -50,7 +59,8 @@
     </div>
     <footer>
         <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
-        <p>Feito por <strong>Cleidson Danilo</strong> | Versão Beta 1.0</p>
+        <p>desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
     </footer>
+    <script src="../dados/scriptAdicionais.js"></script>
 </body>
 </html>

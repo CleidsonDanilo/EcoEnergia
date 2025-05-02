@@ -1,60 +1,80 @@
+/* Estilo base */
 .navbar {
-    background-color: #2e7d32; /* Cor de fundo da barra */
+  background-color: #2e7d32;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  display: none; /* Só aparece em telas pequenas */
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #1b5e20;
+}
+
+.nav-links a.ativo {
+  background-color: rgba(140, 253, 219, 0.1);
+  color: #31ec2a;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #2e7d32;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    display: none;
     padding: 10px 20px;
-    display: flex;
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: center; /* Alinha verticalmente os itens */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-    border-radius: 10px; /* Bordas arredondadas */
-    margin-bottom: 20px; /* Espaço abaixo da barra */}
-.navbar ul {
-    list-style: none; /* Remove os marcadores */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px; /* Espaçamento entre os links */
-}
-.navbar ul li {
-    display: inline;
-}
-.navbar ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Cor do texto */
+  }
+
+  .nav-links a.ativo {
+    background-color: rgba(0, 150, 136, 0.1);
+    color: #009688;
     font-weight: bold;
-    transition: background-color 0.3s; /* Transição suave para hover */
-}
-.navbar ul li a:hover {
-    background-color: #1b5e20; /* Cor ao passar o mouse */
-    padding: 8px 16px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */   
-}
-/* Estilo básico do botão */
-#toggle-dark {
-    background-color: #43a047; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remove bordas */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Cursor de clique */
-    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
-    display: inline-block; /* Garante que o botão não se estique */
-    width: auto; /* Evita que o botão ocupe largura total */
-}
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
 
-/* Efeito ao passar o mouse */
-#toggle-dark:hover {
-    background-color: #2e7d32; /* Cor mais escura no hover */
-    transform: scale(1.05); /* Leve aumento no tamanho */
-}
-
-/* Efeito ao clicar */
-#toggle-dark:active {
-    background-color: #1b5e20; /* Cor ainda mais escura ao clicar */
-    transform: scale(0.95); /* Leve redução no tamanho */
-}
-.navbar ul li a.active {
-    border-bottom: 3px solid white;
-    padding-bottom: 5px;
+  .nav-links li {
+    margin-bottom: 10px;
+  }
 }

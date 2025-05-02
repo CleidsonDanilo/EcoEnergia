@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o EcoEnergia</title>
-    <link rel="stylesheet" href="../Estilos/sobre.css">
-    <link rel="stylesheet" href="../Estilos/navbar.css">
+    <link rel="stylesheet" href="../estilos/navbar.css">
+    <link rel="stylesheet" href="../estiloEscuro/dark.css">
+    <link rel="stylesheet" href="../estilos/sobre.css">
     <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VKCX92JMY4');
+  </script>
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../Pagina/potencia.html">Calcular pelo aparelho</a></li>
-            <li><a href="../Pagina/conta.html">Calcular pela conta</a></li>
-            <li><a href="../Pagina/sobre.html"class="active">Sobre</a></li>
-            <li><a href="../Pagina/contato.html">Contato</a></li>  
+        <a href="../index.html" class="logo">EcoEnergia</a>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../paginas/potencia.html">Calcular potencia</a></li>
+          <li><a href="../paginas/conta.html">Calcular conta</a></li>
+          <li><a href="../paginas/sobre.html" class="nav-link ativo">Sobre</a></li>
+          <li><a href="../paginas/contato.html">Contato</a></li>
         </ul>
+        <button id="toggle-dark">Modo escuro 🌒</button>
     </nav>
     <header>
+
         <h1>Sobre EcoEnergia</h1>
     </header>
     <div class="container">
@@ -41,9 +54,9 @@
     
         <h2>Sites de Referência  </h2>
         <ul>
-            <li><a href="https://www.procelinfo.com.br/" target="_blank">Procel Info</a> - Programa Nacional de Conservação de Energia Elétrica</li>
-            <li><a href="https://www.aneel.gov.br/" target="_blank">ANEEL</a> - Agência Nacional de Energia Elétrica</li>
-            <li><a href="https://www.energisa.com.br/dicas-para-economizar-energia" target="_blank">Energisa</a> - Dicas Práticas para Economizar Energia</li>
+            <li><a href="https://www.procelinfo.com.br/" target="_blank" style=" color: #00aeff; text-decoration: none;">Procel Info</a> - Programa Nacional de Conservação de Energia Elétrica</li>
+            <li><a href="https://www.aneel.gov.br/" target="_blank" style=" color: #00aeff; text-decoration: none;">ANEEL</a> - Agência Nacional de Energia Elétrica</li>
+            <li><a href="https://www.energisa.com.br/dicas-para-economizar-energia" target="_blank" style=" color: #00aeff; text-decoration: none;">Energisa</a> - Dicas Práticas para Economizar Energia</li>
         </ul>
         <p>Esses sites oferecem informações valiosas sobre consumo consciente e dicas práticas para economizar energia.</p>
         <h2>Sobre o Desenvolvimento </h2>
@@ -58,14 +71,18 @@
     
         <p>Esperamos que o EcoEnergia ajude você a entender melhor seus gastos e a fazer escolhas mais conscientes. Juntos, podemos fazer a diferença!</p>
     </div>
-    <!-- Rodapé com informações do desenvolvedor -->
-    <footer class="footer">
-        <p>Desenvolvido por <strong>Cleidson Danilo</strong></p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://www.instagram.com/danilodev_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>    
+    <footer>
+        <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
+        <p>desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
+          <p>
+            <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00aeff; text-decoration: none;">LinkedIn</a> |
+            <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00aeff; text-decoration: none;">Instagram</a>
+          </p>
+        </footer>
+    <script src="../dados/scriptAdicionais.js"></script>
+
+      
 </body>
-<script src="../Dados/script.js"></script> <!-- Script para o modo escuro -->   
-    </html>
-    
+</html>
+
+
