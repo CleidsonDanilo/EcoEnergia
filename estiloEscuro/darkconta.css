@@ -75,12 +75,9 @@
   }
   
   /* MODO ESCURO: BOTÕES */
-  body.dark button {
-    background: #007d7e;
-  }
-  
+
   body.dark button:hover {
-    background: #005e5e;
+    background: #333;
   }
   
   /* MODO ESCURO: RESULTADO */
@@ -114,7 +111,7 @@
   }
   
   body.dark .menu-toggle {
-    color: #74d8d3; /* Cor do botão de menu no modo escuro */
+    color: hsl(0, 0%, 94%); /* Cor do botão de menu no modo escuro */
   }
   
   body.dark .nav-links {

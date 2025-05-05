@@ -7,10 +7,10 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     padding: 10px;
     margin: 5;
-    font-size: 3em;
+    font-size: 2em;
     color: #047a0c;
 }
 

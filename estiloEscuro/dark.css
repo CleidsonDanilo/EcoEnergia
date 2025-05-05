@@ -1,7 +1,7 @@
 /* BOTÃO DE TOGGLE */
 #toggle-dark {
-  background: none;
-  border: 2px solid #f5f5f5;
+  background: transparent;
+  border: none;
   color: #fcfcfc;
   padding: 8px 12px;
   border-radius: 6px;
@@ -12,27 +12,26 @@
 }
 
 #toggle-dark:hover {
-  background: #161616;
-  color: white;
+  background: #333;
+  color: #ffffff;
+
 }
 
-/* Botão Dark no Modo Escuro */
 body.dark #toggle-dark {
-  background: none;
-  border: 2px solid #01f8f8;
-  color: white;
-  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  color: #cde7e5;
+  padding: 10px 16px;
   border-radius: 6px;
-  margin-bottom: 3px;
-  cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s;
+  cursor: pointer;
 }
 
 body.dark #toggle-dark:hover {
-  background: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: #333;
+  color: #74d8d3;
 }
+
 
 /* MODO ESCURO: GERAL */
 body.dark {
@@ -74,13 +73,8 @@ body.dark select {
   border: 1px solid #555;
 }
 
-/* MODO ESCURO: BOTÕES */
-body.dark button {
-  background: #007d7e;
-}
-
 body.dark button:hover {
-  background: #005e5e;
+  background: #333;
 }
 
 /* MODO ESCURO: RESULTADO */
@@ -134,17 +128,16 @@ body.dark .nav-links a.ativo {
   color: #74d8d3; /* Cor do texto do link ativo no modo escuro */
 }
 
-/* TRANSIÇÃO SUAVE */
 body.dark,
 body.dark .container,
 body.dark input,
 body.dark select,
 body.dark #resultado,
 body.dark footer,
-body.dark .navbar
+body.dark .navbar,
 body.dark .logo,
 body.dark .menu-toggle,
 body.dark .nav-links,
-body.dark .nav-links a{
+body.dark .nav-links a {
   transition: background 0.2s, color 0.3s, border 0.3s;
 }

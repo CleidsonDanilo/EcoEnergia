@@ -1,14 +1,12 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #d0f0c0, #ffffff);
+    background: #fffbfb;
     color: #333333; /* Cor do texto */
     padding: 20px;
 }
 header, footer {
-    text-align: center;
-    padding: 10px;
-}
+    text-align: center;}
 header {
     padding: 30px;
     border-radius: 10px;

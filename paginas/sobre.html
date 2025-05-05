@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o EcoEnergia</title>
-    <link rel="stylesheet" href="../estilos/navbar.css">
+    <link rel="stylesheet" href="../estilos/navbar.css" />
     <link rel="stylesheet" href="../estiloEscuro/dark.css">
     <link rel="stylesheet" href="../estilos/sobre.css">
     <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
@@ -19,18 +19,31 @@
     gtag('config', 'G-VKCX92JMY4');
   </script>
 <body>
-    <nav class="navbar">
-        <a href="../index.html" class="logo">EcoEnergia</a>
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-        <ul class="nav-links">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../paginas/potencia.html">Calcular potencia</a></li>
-          <li><a href="../paginas/conta.html">Calcular conta</a></li>
-          <li><a href="../paginas/sobre.html" class="nav-link ativo">Sobre</a></li>
-          <li><a href="../paginas/contato.html">Contato</a></li>
-        </ul>
-        <button id="toggle-dark">Modo escuro 🌒</button>
-    </nav>
+  <nav class="navbar">
+    <a href="../index.html" class="logo">EcoEnergia</a>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../paginas/potencia.html">Calcular potência</a></li>
+      <li><a href="../paginas/conta.html">Calcular conta</a></li>
+      <li><a href="../paginas/sobre.html" class="nav-link ativo">Sobre</a></li>
+      <li><a href="../paginas/contato.html">Contato</a></li>
+      <li><button id="toggle-dark">Modo escuro 🌒</button></li>
+    </ul>
+  </nav>
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
     <header>
 
         <h1>Sobre EcoEnergia</h1>
@@ -79,8 +92,27 @@
             <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00aeff; text-decoration: none;">Instagram</a>
           </p>
         </footer>
-    <script src="../dados/scriptAdicionais.js"></script>
-
+        <script src="dados/scriptAdicionais.js"></script>
+        <script>
+          const btnToggle = document.getElementById('toggle-dark');
+        
+          btnToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle('dark');
+            btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
+            localStorage.setItem('modoEscuro', isDark);
+          });
+        
+          // Ao carregar, aplica o modo salvo
+          window.addEventListener('DOMContentLoaded', () => {
+            const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
+            if (modoSalvo) {
+              document.body.classList.add('dark');
+              btnToggle.textContent = 'Modo claro 🌔';
+            } else {
+              btnToggle.textContent = 'Modo escuro 🌒';
+            }
+          });
+        </script>
       
 </body>
 </html>
