@@ -84,16 +84,7 @@
   color: #31ec2a;
 }
 
-.dark-toggle {
-  background: transparent;
-  border: 2px solid #f5f5f5;
-  color: #fcfcfc;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
-}
+
 
 /* RESPONSIVO */
 @media (max-width: 800px) {
