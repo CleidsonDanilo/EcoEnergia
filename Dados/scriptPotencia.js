@@ -39,4 +39,12 @@ function calcular() {
   `;
 }
 
+function limparFormulario() {
+  document.getElementById('potencia').value = '';
+  document.getElementById('horas').value = '';
+  document.getElementById('dias').value = '';
+  document.getElementById('estado').selectedIndex = 0;
+  document.getElementById('resultado').innerHTML = '';
+}
+
 carregarEstados();

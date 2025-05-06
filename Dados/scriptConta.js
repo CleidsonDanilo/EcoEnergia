@@ -32,5 +32,10 @@ function calcularConta() {
   `;
 }
 
+function limparFormulario() {
+  document.getElementById('consumo').value = '';
+  document.getElementById('estado').selectedIndex = 0;
+  document.getElementById('resultado').innerHTML = '';
+}
 
-  carregarEstados();
+carregarEstados();
