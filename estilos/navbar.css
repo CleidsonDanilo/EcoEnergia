@@ -90,6 +90,7 @@
 @media (max-width: 800px) {
   .menu-toggle {
     display: block;
+    order: -1;
   }
 
   .nav-links {
