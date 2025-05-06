@@ -1,52 +1,55 @@
+/* GERAL */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background: #ffffff;
-  color: #333333; /* Cor do texto */
+  color: #333333;
   padding: 20px;
 }
 
 header, footer {
   text-align: center;
-  
 }
+
 header {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 header h1 {
-  text-align: center;
   padding: 1px;
-  margin: 5;
+  margin: 5px;
   font-size: 2em;
   color: #047a0c;
-  
 }
+
 header h2 {
   margin: 0;
   font-size: 1.5em;
   color: #388e3c;
 }
 
-h1, h2 {  
-  color: #1b5e20; /* Cor do título */
+h1, h2 {
+  color: #1b5e20;
 }
+
+/* CONTAINER */
 .container {
   max-width: 800px;
   margin: auto;
 }
+
 .container p {
   text-align: left;
   line-height: 1.5;
-  margin-bottom: 10px; /* Adiciona um espaço consistente abaixo do parágrafo */
-  font-size: 1.0em; /* Aumenta o tamanho da fonte para melhor legibilidade */
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
 .container p strong {
-  color: #388e3c; /* Cor do texto em negrito */
+  color: #388e3c;
 }
-
 
 /* LISTA DE RECURSOS */
 .container ul {
@@ -56,44 +59,39 @@ h1, h2 {
 
 .container ul li {
   margin-bottom: 10px;
-  
 }
 
 /* BOTÕES DA HOME */
 .botoes-home {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   gap: 15px;
   margin-top: 20px;
-}
-.botoes-home {
-  display: flex;
-  flex-direction: row; /* Altera para linha */
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  gap: 15px;
-  margin-top: 20px;
+  flex-wrap: wrap; /* permite quebra de linha se necessário */
 }
 
 .botao-link {
   display: inline-block;
   background: #067214;
   color: white;
-  padding: 8px; /* Diminuído de 10px para 8px */
+  padding: 8px;
   text-align: center;
-  border-radius: 6px; /* Diminuído de 8px para 6px */
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
-  font-size: 0.9em; /* Diminuído de 1em para 0.9em */
+  font-size: 0.9em;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 300px; /* Ajusta a largura */
+  width: 300px;
 }
 
 .botao-link:hover {
   background: #02bb2a;
 }
 
+/* RODAPÉ */
 footer {
   text-align: center;
   padding: 10px;
@@ -101,15 +99,31 @@ footer {
   border-radius: 10px;
   margin-top: 20px;
 }
+
 /* MODO ESCURO */
 body.dark .botao-link {
   background: #00635e;
-  transition: background 0.3s;
 }
 
 body.dark .botao-link:hover {
   background: #004b47;
 }
 
+/* RESPONSIVO - TELAS MENORES */
+@media (max-width: 600px) {
+  .botao-link {
+    width: 100%; /* ocupa largura total em celulares */
+  }
 
+  .container {
+    padding: 10px;
+  }
 
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+  }
+}
