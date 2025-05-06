@@ -73,7 +73,15 @@ body.dark #toggle-dark:hover {
     border: 1px solid #555;
   }
   
-  /* MODO ESCURO: BOTÕES */
+   /* MODO ESCURO: BOTÕES */
+
+   body.dark button {
+    padding: 12px;
+    background-color: #00978f;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
   body.dark button:hover {
     background: #333;
   }
@@ -128,6 +136,32 @@ body.dark #toggle-dark:hover {
     background-color: rgba(116, 216, 211, 0.1); /* Cor de fundo do link ativo no modo escuro */
     color: #74d8d3; /* Cor do texto do link ativo no modo escuro */
   }
+
+  /* MODO ESCURO: ALERTA PERSONALIZADO */
+body.dark .alerta-personalizado {
+  background-color: #333;
+  color: #cde7e5;
+  border: 1px solid #74d8d3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .alerta-personalizado h2 {
+  color: #74d8d3;
+}
+
+body.dark .alerta-personalizado p {
+  color: #cde7e5;
+}
+
+body.dark .alerta-personalizado button {
+  background-color: #74d8d3;
+  color: #000000;
+}
+
+body.dark .alerta-personalizado button:hover {
+  background-color: #cde7e5;
+  color: #000000;
+}
   
   /* TRANSIÇÃO SUAVE */
   body.dark,

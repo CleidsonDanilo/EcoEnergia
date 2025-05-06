@@ -73,12 +73,80 @@ ul li a {
 
 }
 
-
 footer {
     text-align: center;
     padding: 10px;
     background-color: #c8e6c9;
     border-radius: 10px;
     margin-top: 30px;
+}
+
+/* Adicionando estilo para o alerta personalizado */
+.alerta-personalizado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #1b5e20;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    text-align: center;
+}
+
+.alerta-personalizado h2 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.alerta-personalizado p {
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.alerta-personalizado button {
+
+    padding: 10px 20px;
+    background-color: #0c8a13;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    letter-spacing: 0.5px; /* Adiciona um espaçamento leve entre as letras */
+    font-weight: bold; /* Deixa o texto em negrito */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao botão */
+    margin-top: 10px; /* Adiciona um espaço acima do botão */
+}
+
+.alerta-personalizado button:hover {
+    background-color: #2e7d32;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .alerta-personalizado {
+        width: 90%;
+        padding: 15px;
+        font-size: 0.8em;
+    }
+
+    .alerta-personalizado button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
 }
 

@@ -38,4 +38,40 @@ function limparFormulario() {
   document.getElementById('resultado').innerHTML = '';
 }
 
+function mostrarAjuda() {
+  // Criar elementos para o alerta personalizado
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+
+  const alerta = document.createElement('div');
+  alerta.className = 'alerta-personalizado';
+
+  alerta.innerHTML = `
+    <h2>Ajuda</h2>
+    <p>Preencha os campos da seguinte forma:</p>
+    <ul>
+      <li><strong>Consumo:</strong> Insira o consumo registrado em kWh.</li>
+      <li><strong>Estado:</strong> Selecione o estado para calcular o custo com base na tarifa local.</li>
+    </ul>
+
+    <button onclick="fecharAjuda()">Fechar</button>
+  `;
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(alerta);
+}
+
+function fecharAjuda() {
+  const overlay = document.querySelector('.overlay');
+  const alerta = document.querySelector('.alerta-personalizado');
+
+  if (overlay) {
+    overlay.remove();
+  }
+
+  if (alerta) {
+    alerta.remove();
+  }
+}
+
 carregarEstados();
