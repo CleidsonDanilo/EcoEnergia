@@ -8,6 +8,7 @@ body {
 
 header, footer {
   text-align: center;
+  
 }
 header {
   padding: 30px;
@@ -20,6 +21,7 @@ header h1 {
   margin: 5;
   font-size: 2em;
   color: #047a0c;
+  
 }
 header h2 {
   margin: 0;
@@ -35,8 +37,10 @@ h1, h2 {
   margin: auto;
 }
 .container p {
-  text-align: justify;
-  line-height: 1.6;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 10px; /* Adiciona um espaço consistente abaixo do parágrafo */
+  font-size: 1.0em; /* Aumenta o tamanho da fonte para melhor legibilidade */
 }
 
 .container p strong {
@@ -62,17 +66,28 @@ h1, h2 {
   gap: 15px;
   margin-top: 20px;
 }
+.botoes-home {
+  display: flex;
+  flex-direction: row; /* Altera para linha */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 15px;
+  margin-top: 20px;
+}
 
 .botao-link {
-  display: block;
+  display: inline-block;
   background: #067214;
   color: white;
-  padding: 14px;
+  padding: 8px; /* Diminuído de 10px para 8px */
   text-align: center;
-  border-radius: 8px;
+  border-radius: 6px; /* Diminuído de 8px para 6px */
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
+  font-size: 0.9em; /* Diminuído de 1em para 0.9em */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px; /* Ajusta a largura */
 }
 
 .botao-link:hover {
