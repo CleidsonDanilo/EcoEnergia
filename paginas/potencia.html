@@ -153,6 +153,46 @@
         <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">Instagram</a>
       </p>
     </footer>
+    <script>
+    function limparFormulario() {
+      document.getElementById('potencia').value = '';
+      document.getElementById('horas').value = '';
+      document.getElementById('dias').value = '';
+      document.getElementById('estado').selectedIndex = 0;
+      document.getElementById('resultado').innerHTML = '';
+    }
+    
+    function mostrarAjuda() {
+      // Criar elementos para o alerta personalizado
+      const overlay = document.createElement('div');
+      overlay.className = 'overlay';
+    
+      const alerta = document.createElement('div');
+      alerta.className = 'alerta-personalizado';
+    
+      alerta.innerHTML = `
+        <h2>Ajuda</h2>
+        <p>Preencha os campos da seguinte forma:</p>
+        <ul>
+          <li><strong>Potência:</strong> Insira a potência do aparelho em Watts.</li>
+          <li><strong>Horas:</strong> Informe o número de horas que o aparelho é usado por dia (máximo 24).</li>
+          <li><strong>Dias:</strong> Informe o número de dias que o aparelho é usado por mês.</li>
+          <li><strong>Estado:</strong> Selecione o estado para calcular o custo com base na tarifa local.</li>
+        </ul>
+        <button onclick="fecharAjuda()">Fechar</button>
+      `;
+    
+      document.body.appendChild(overlay);
+      document.body.appendChild(alerta);
+    }
+    
+    function fecharAjuda() {
+      const overlay = document.querySelector('.overlay');
+      const alerta = document.querySelector('.alerta-personalizado');
+    
+      if (overlay) overlay.remove();
+      if (alerta) alerta.remove();
+    }</script>
   <script src="../dados/scriptPotencia.js"></script>
   <script src="../dados/scriptAdicionais.js"></script>
   <script>
