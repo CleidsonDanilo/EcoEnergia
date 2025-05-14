@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Energia</title>
   <link rel="stylesheet" href="../estilos/navbar.css" />
-  <link rel="stylesheet" href="../estiloEscuro/darkpotencia.css"/>
-  <link rel="stylesheet" href="../estilos/opcoes.css"/>
-  
+  <link rel="stylesheet" href="../estiloEscuro/darkpotencia.css" />
+  <link rel="stylesheet" href="../estilos/opcoes.css" />
 
   <style>
     .container {
@@ -73,43 +72,44 @@
     }
   </style>
 
-    
-  </style>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
-
     gtag('config', 'G-VKCX92JMY4');
   </script>
- <nav class="navbar">
+</head>
+<body>
+  <nav class="navbar">
     <a href="../index.html" class="logo">EcoEnergia</a>
-    <button class="menu-toggle" aria-label="Abrir menu">
+    <button class="menu-toggle" aria-label="Abrir menu"></button>
       <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="3" y1="6" x2="21" y2="6" />
         <line x1="3" y1="12" x2="21" y2="12" />
         <line x1="3" y1="18" x2="21" y2="18" />
       </svg>
-    </button>    <ul class="nav-links">
+    </button>
+    <ul class="nav-links">
       <li><a href="../index.html">Início</a></li>
-      <li><a href="../paginas/potencia.html"class="nav-link ativo">Calcular potência</a></li>
+      <li><a href="../paginas/potencia.html" class="nav-link ativo">Calcular potência</a></li>
       <li><a href="../paginas/conta.html">Calcular conta</a></li>
       <li><a href="../paginas/sobre.html">Sobre</a></li>
       <li><a href="../paginas/contato.html">Contato</a></li>
       <li><button id="toggle-dark">Modo escuro 🌒</button></li>
     </ul>
   </nav>
+
   <script>
     const toggleBtn = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-  
+
     toggleBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
   </script>
-<body> 
 
   <div class="container">
     <h1>Calculadora de Gasto de Energia</h1>
@@ -140,15 +140,43 @@
 
     <div id="resultado"></div>
   </div>
+
   <footer>
     <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
-    <p>desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
-      <p>
-        <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">LinkedIn</a> |
-        <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">Instagram</a>
-      </p>
-    </footer>
-    <script>
+    <p>Desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
+    <p>
+      <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">LinkedIn</a> |
+      <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    function calcular() {
+      const potencia = parseFloat(document.getElementById('potencia').value);
+      const horas = parseFloat(document.getElementById('horas').value);
+      const dias = parseFloat(document.getElementById('dias').value);
+      const estado = document.getElementById('estado').value;
+
+      if (horas > 24) {
+        alert('O número de horas por dia não pode ser maior que 24.');
+        return;
+      }
+
+      if (isNaN(potencia) || isNaN(horas) || isNaN(dias) || !estado) {
+        alert('Preencha todos os campos corretamente!');
+        return;
+      }
+
+      const consumo = (potencia * horas * dias) / 1000;
+      const precoKwh = estados[estado];
+      const custo = consumo * precoKwh;
+
+      document.getElementById('resultado').innerHTML = `
+        <p>Consumo mensal: <strong>${consumo.toFixed(2)} kWh</strong></p>
+        <p>Custo estimado: <strong>R$ ${custo.toFixed(2)}</strong></p>
+      `;
+    }
+
     function limparFormulario() {
       document.getElementById('potencia').value = '';
       document.getElementById('horas').value = '';
@@ -156,15 +184,14 @@
       document.getElementById('estado').selectedIndex = 0;
       document.getElementById('resultado').innerHTML = '';
     }
-    
+
     function mostrarAjuda() {
-      // Criar elementos para o alerta personalizado
       const overlay = document.createElement('div');
       overlay.className = 'overlay';
-    
+
       const alerta = document.createElement('div');
       alerta.className = 'alerta-personalizado';
-    
+
       alerta.innerHTML = `
         <h2>Ajuda</h2>
         <p>Preencha os campos da seguinte forma:</p>
@@ -176,30 +203,31 @@
         </ul>
         <button onclick="fecharAjuda()">Fechar</button>
       `;
-    
+
       document.body.appendChild(overlay);
       document.body.appendChild(alerta);
     }
-    
+
     function fecharAjuda() {
       const overlay = document.querySelector('.overlay');
       const alerta = document.querySelector('.alerta-personalizado');
-    
+
       if (overlay) overlay.remove();
       if (alerta) alerta.remove();
-    }</script>
+    }
+  </script>
+
   <script src="../dados/scriptPotencia.js"></script>
   <script src="../dados/scriptAdicionais.js"></script>
   <script>
     const btnToggle = document.getElementById('toggle-dark');
-  
+
     btnToggle.addEventListener('click', () => {
       const isDark = document.body.classList.toggle('dark');
       btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
       localStorage.setItem('modoEscuro', isDark);
     });
-  
-    // Ao carregar, aplica o modo salvo
+
     window.addEventListener('DOMContentLoaded', () => {
       const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
       if (modoSalvo) {
@@ -209,5 +237,6 @@
         btnToggle.textContent = 'Modo escuro 🌒';
       }
     });
-  </script></body>
+  </script>
+</body>
 </html>
