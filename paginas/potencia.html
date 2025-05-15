@@ -4,65 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Energia</title>
-  <link rel="stylesheet" href="../estilos/navbar.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../estiloEscuro/darkpotencia.css" />
   <link rel="stylesheet" href="../estilos/opcoes.css" />
 
   <style>
+    body {
+      padding-top: 70px;
+    }
     .container {
       max-width: 800px;
       margin: auto;
       padding: 20px;
     }
-
-    body.dark h1 {
-      text-align: left;
-      padding: 1px;
-      margin: 3;
-      font-size: 2em;
-      color: #00978f;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-      gap: 10px;
-    }
-
-    .form-group label {
-      font-weight: bold;
-    }
-
-    .form-group input,
-    .form-group select {
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #c2bfbf;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #1b5e20;
-      color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #388e3c;
-    }
-
-    button:active {
-      background-color: #145a14;
-    }
-
     #resultado {
       margin-top: 20px;
       color: #000000;
@@ -71,102 +27,97 @@
       padding: 10px;
     }
   </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKCX92JMY4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-VKCX92JMY4');
-  </script>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="logo">EcoEnergia</a>
-    <button class="menu-toggle" aria-label="Abrir menu"></button>
-      <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="18" x2="21" y2="18" />
-      </svg>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="../paginas/potencia.html" class="nav-link ativo">Calcular potência</a></li>
-      <li><a href="../paginas/conta.html">Calcular conta</a></li>
-      <li><a href="../paginas/sobre.html">Sobre</a></li>
-      <li><a href="../paginas/contato.html">Contato</a></li>
-      <li><button id="toggle-dark">Modo escuro 🌒</button></li>
-    </ul>
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">EcoEnergia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="../paginas/potencia.html">Calcular Potência</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/conta.html">Calcular Conta</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/contato.html">Contato</a></li>
+        </ul>
+        <button id="toggle-dark" class="btn btn-outline-light">Modo escuro 🌒</button>
+      </div>
+    </div>
   </nav>
 
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    toggleBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-
   <div class="container">
-    <h1>Calculadora de Gasto de Energia</h1>
-
-    <div class="form-group">
-      <label for="potencia">Potência do aparelho (Watts):</label>
-      <input type="number" id="potencia" />
+    <h1 class="text-success">Calculadora de Gasto de Energia</h1>
+    <div class="mb-3">
+      <label for="potencia" class="form-label">Potência do aparelho (Watts):</label>
+      <input type="number" id="potencia" class="form-control" />
     </div>
 
-    <div class="form-group">
-      <label for="horas">Horas de uso por dia:</label>
-      <input type="number" id="horas" />
+    <div class="mb-3">
+      <label for="horas" class="form-label">Horas de uso por dia:</label>
+      <input type="number" id="horas" class="form-control" />
     </div>
 
-    <div class="form-group">
-      <label for="dias">Dias de uso por mês:</label>
-      <input type="number" id="dias" />
+    <div class="mb-3">
+      <label for="dias" class="form-label">Dias de uso por mês:</label>
+      <input type="number" id="dias" class="form-control" />
     </div>
 
-    <div class="form-group">
-      <label for="estado">Selecione seu estado:</label>
-      <select id="estado"></select>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Selecione seu estado:</label>
+      <select id="estado" class="form-select"></select>
     </div>
 
-    <button onclick="calcular()">Calcular</button>
-    <button type="button" onclick="limparFormulario()">Limpar</button>
-    <button type="button" onclick="mostrarAjuda()">Ajuda</button>
+    <button class="btn btn-success me-2" onclick="calcular()">Calcular</button>
+    <button class="btn btn-secondary me-2" onclick="limparFormulario()">Limpar</button>
+    <button class="btn btn-info text-white" onclick="mostrarAjuda()">Ajuda</button>
 
     <div id="resultado"></div>
   </div>
 
-  <footer>
+  <footer class="bg-light text-center mt-4 p-3">
     <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
     <p>Desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
     <p>
-      <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">LinkedIn</a> |
-      <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00978f; text-decoration: none;">Instagram</a>
+      <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank">LinkedIn</a> |
+      <a href="https://www.instagram.com/danilodev_/" target="_blank">Instagram</a>
     </p>
   </footer>
+
+  <!-- Scripts -->
   <script src="../dados/scriptPotencia.js"></script>
   <script src="../dados/scriptAdicionais.js"></script>
   <script>
+    let estados = {};
+    async function carregarEstados() {
+      try {
+        const response = await fetch('../dados/estados.json');
+        if (!response.ok) throw new Error('Erro ao carregar estados.');
+        estados = await response.json();
+
+        const select = document.getElementById('estado');
+        for (const estado in estados) {
+          const option = document.createElement('option');
+          option.value = estado;
+          option.textContent = estado;
+          select.appendChild(option);
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Erro ao carregar estados.');
+      }
+    }
+
     function calcular() {
       const potencia = parseFloat(document.getElementById('potencia').value);
       const horas = parseFloat(document.getElementById('horas').value);
       const dias = parseFloat(document.getElementById('dias').value);
       const estado = document.getElementById('estado').value;
 
-      if (horas > 24) {
-        alert('O número de horas por dia não pode ser maior que 24.');
-        return;
-      }
-
-      if (isNaN(potencia) || isNaN(horas) || isNaN(dias) || !estado) {
-        alert('Preencha todos os campos corretamente!');
-        return;
-      }
+      if (horas > 24) return alert('O número de horas não pode ser maior que 24.');
+      if (!potencia || !horas || !dias || !estado) return alert('Preencha todos os campos corretamente.');
 
       const consumo = (potencia * horas * dias) / 1000;
       const precoKwh = estados[estado];
@@ -187,39 +138,10 @@
     }
 
     function mostrarAjuda() {
-      const overlay = document.createElement('div');
-      overlay.className = 'overlay';
-
-      const alerta = document.createElement('div');
-      alerta.className = 'alerta-personalizado';
-
-      alerta.innerHTML = `
-        <h2>Ajuda</h2>
-        <p>Preencha os campos da seguinte forma:</p>
-        <ul>
-          <li><strong>Potência:</strong> Insira a potência do aparelho em Watts.</li>
-          <li><strong>Horas:</strong> Informe o número de horas que o aparelho é usado por dia (máximo 24).</li>
-          <li><strong>Dias:</strong> Informe o número de dias que o aparelho é usado por mês.</li>
-          <li><strong>Estado:</strong> Selecione o estado para calcular o custo com base na tarifa local.</li>
-        </ul>
-        <button onclick="fecharAjuda()">Fechar</button>
-      `;
-
-      document.body.appendChild(overlay);
-      document.body.appendChild(alerta);
+      alert('Preencha os campos com os dados do aparelho e selecione seu estado para obter o cálculo estimado.');
     }
 
-    function fecharAjuda() {
-      const overlay = document.querySelector('.overlay');
-      const alerta = document.querySelector('.alerta-personalizado');
-
-      if (overlay) overlay.remove();
-      if (alerta) alerta.remove();
-    }
-  </script>
-  <script>
     const btnToggle = document.getElementById('toggle-dark');
-
     btnToggle.addEventListener('click', () => {
       const isDark = document.body.classList.toggle('dark');
       btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
@@ -231,10 +153,12 @@
       if (modoSalvo) {
         document.body.classList.add('dark');
         btnToggle.textContent = 'Modo claro 🌔';
-      } else {
-        btnToggle.textContent = 'Modo escuro 🌒';
       }
+      carregarEstados();
     });
   </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
