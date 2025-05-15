@@ -93,7 +93,7 @@
     let estados = {};
     async function carregarEstados() {
       try {
-        const response = await fetch('../dados/estados.json');
+        const response = await fetch('/EcoEnergia/dados/estados.json');
         if (!response.ok) throw new Error('Erro ao carregar estados.');
         estados = await response.json();
 
