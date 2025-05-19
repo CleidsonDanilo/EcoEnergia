@@ -49,11 +49,11 @@ body.dark h1 {
     padding: 1px;
     margin: 5;
     font-size: 3em;
-    color: #00978f;
+    color: #00978f  !important;
 }
 
 body.dark .container h2 {
-  color: #00978f;
+  color: #00978f  !important;
   margin-top: 20px;
 }
 body.dark .container p strong {
@@ -99,8 +99,10 @@ body.dark footer {
 
 /* MODO ESCURO: NAVEGAÇÃO */
 body.dark .navbar {
-  background-color: #1b1b1b; /* Cor de fundo da barra de navegação no modo escuro */
-  border-color: #333; /* Cor da borda no modo escuro */
+    background-color: #1b1b1b !important;
+    border-color: #333;
+    transition: background 0.3s;
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
 }
 
 body.dark .logo {
@@ -111,34 +113,24 @@ body.dark .menu-toggle {
   color: #74d8d3; /* Cor do botão de menu no modo escuro */
 }
 
-body.dark .nav-links {
-  background-color: #1b1b1b; /* Cor de fundo do menu no modo escuro */
-}
+
 
 body.dark .nav-links a {
   color: #cde7e5; /* Cor dos links no modo escuro */
 }
 
 body.dark .nav-links a:hover {
-  background-color: #333; /* Cor de fundo ao passar o mouse no modo escuro */
+  background-color: #00978f; /* Cor de fundo ao passar o mouse no modo escuro */
 }
 
-body.dark .nav-links a.ativo {
-  background-color: rgba(116, 216, 211, 0.1); /* Cor de fundo do link ativo no modo escuro */
-  color: #74d8d3; /* Cor do texto do link ativo no modo escuro */
+body.dark .navbar-nav .nav-link.active {
+    color: #00978f !important;
 }
 
-body.dark,
-body.dark .container,
-body.dark input,
-body.dark select,
-body.dark #resultado,
-body.dark footer,
-body.dark .navbar,
-body.dark .logo,
-body.dark .menu-toggle,
-body.dark .nav-links,
-body.dark .nav-links a {
-  transition: background 0.2s, color 0.3s, border 0.3s;
+body.dark .bg-light { /* final codigo */
+  background-color: #2a2a2a !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
-

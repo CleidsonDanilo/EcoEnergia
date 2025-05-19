@@ -33,7 +33,7 @@
         <li class="nav-item"><a class="nav-link" href="../paginas/potencia.html">Calcular Potência</a></li>
         <li class="nav-item"><a class="nav-link" href="../paginas/conta.html">Calcular Conta</a></li>
         <li class="nav-item"><a class="nav-link active" href="../paginas/sobre.html">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="../paginas/contato.html">Contato</a></li>
+        <li class="nav-item"><a class="nav-link" href="../paginas/contato.html">Feedback</a></li>
       </ul>
     </div>
     <div class="d-none d-lg-block">
@@ -73,9 +73,9 @@
     
         <h2>Sites de Referência  </h2>
         <ul>
-            <li><a href="https://www.procelinfo.com.br/" target="_blank" style=" color: #00aeff; text-decoration: none;">Procel Info</a> - Programa Nacional de Conservação de Energia Elétrica</li>
+            <li><a href="https://www.gov.br/mme/pt-br/assuntos/secretarias/sntep/procel" target="_blank" style=" color: #00aeff; text-decoration: none;">Procel</a> - Programa Nacional de Conservação de Energia Elétrica</li>
             <li><a href="https://www.aneel.gov.br/" target="_blank" style=" color: #00aeff; text-decoration: none;">ANEEL</a> - Agência Nacional de Energia Elétrica</li>
-            <li><a href="https://www.energisa.com.br/dicas-para-economizar-energia" target="_blank" style=" color: #00aeff; text-decoration: none;">Energisa</a> - Dicas Práticas para Economizar Energia</li>
+            <li><a href="https://www.energisa.com.br/search-result?search_api_fulltext=dicas" target="_blank" style=" color: #00aeff; text-decoration: none;">Energisa</a> - Dicas Práticas para Economizar Energia</li>
         </ul>
         <p>Esses sites oferecem informações valiosas sobre consumo consciente e dicas práticas para economizar energia.</p>
         <h2>Sobre o Desenvolvimento </h2>
@@ -86,35 +86,28 @@
             <li>Acessibilidade e usabilidade para todos os públicos</li>
             <li>Armazenamento local para histórico (em desenvolvimento)</li>
         </ul>
-        <p>A ideia surgiu da combinação entre tecnologia, praticidade e preocupação com o meio ambiente — criando assim uma ferramenta que vai além de um simples cálculo: é uma plataforma de conscientização.</p>
+        <p>A ideia surgiu da combinação entre tecnologia, praticidade e preocupação com o meio ambiente — criando assim uma ferramenta que vai além de um simples cálculo: é uma plataforma de conscientização. </p>
     
-        <p>Esperamos que o EcoEnergia ajude você a entender melhor seus gastos e a fazer escolhas mais conscientes. Juntos, podemos fazer a diferença!</p>
+        <p>Atualmente o EcoEnergia esta na versão 2.1 e foi desenvolvido por Cleidson Danilo no ano de 2025, Esperamos que o EcoEnergia ajude você a entender melhor seus gastos e a fazer escolhas mais conscientes. Juntos, podemos fazer a diferença!</p>
     </div>
-    <footer>
-        <p>EcoEnergia ©2025 - Todos os direitos reservados.</p>
-        <p>desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 1.0</p>
-          <p>
-            <a href="https://www.linkedin.com/in/cleidson-danilo-dev/" target="_blank" style="margin: 0 10px; color: #00aeff; text-decoration: none;">LinkedIn</a> |
-            <a href="https://www.instagram.com/danilodev_/" target="_blank" style="margin: 0 10px; color: #00aeff; text-decoration: none;">Instagram</a>
-          </p>
-        </footer>
+        <script src="../js/script.js"></script>
         <script>
-          const btnToggle = document.getElementById('toggle-dark');
-        
-          btnToggle.addEventListener('click', () => {
-            const isDark = document.body.classList.toggle('dark');
-            btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
-            localStorage.setItem('modoEscuro', isDark);
-          });
-        
-          // Ao carregar, aplica o modo salvo
-          window.addEventListener('DOMContentLoaded', () => {
-            const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
-            if (modoSalvo) {
-              document.body.classList.add('dark');
-              btnToggle.textContent = 'Modo claro 🌔';
-            } else {
-              btnToggle.textContent = 'Modo escuro 🌒';
+          document.addEventListener('DOMContentLoaded', function() {
+            const btnToggle = document.getElementById('toggle-dark');
+            if (btnToggle) {
+              btnToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark');
+                btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
+                localStorage.setItem('modoEscuro', isDark);
+              });
+              // Aplica o modo salvo ao carregar
+              const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
+              if (modoSalvo) {
+                document.body.classList.add('dark');
+                btnToggle.textContent = 'Modo claro 🌔';
+              } else {
+                btnToggle.textContent = 'Modo escuro 🌒';
+              }
             }
           });
         </script>

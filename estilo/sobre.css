@@ -35,6 +35,7 @@ h1, h2 {
 .container {
     max-width: 800px;
     margin: auto;
+    
 }
 .container p {
     text-align: justify;
@@ -45,10 +46,15 @@ h1, h2 {
     color: #388e3c; /* Cor do texto em negrito */
   }
 
-  footer {
+  footer  {
     text-align: center;
     padding: 10px;
     background-color: #e6f0e7;
     border-radius: 10px;
     margin-top: 20px;
   }
+
+  fooster p {
+    text-align: center;
+    line-height: 1.6;
+}

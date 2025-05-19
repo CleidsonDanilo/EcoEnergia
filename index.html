@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoEnergia - Início</title>
-  <link rel="stylesheet" href="estilo/dark.css">
+  <link rel="stylesheet" href="estiloEscuro/dark.css">
   <link rel="stylesheet" href="estilo/home.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
-  <!-- ...código anterior... -->
   <style>
     html, body {
       height: 100%;
@@ -24,40 +23,129 @@
     footer {
       flex-shrink: 0;
     }
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-img-top,
+    .gif-hover {
+      width: 90%;
+      max-width: 140px;
+      height: 140px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      object-fit: cover;
+      display: block;
+    }
+    .gif-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 2;
+    }
+    .card:hover .gif-hover {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .card:hover .card-img-top {
+      opacity: 0;
+    }
   </style>
-  <!-- ...código posterior... -->
-  </head>    
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">EcoEnergia</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">EcoEnergia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/potencia.html">Calcular Potência</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/conta.html">Calcular Conta</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="paginas/contato.html">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block">
+        <button id="toggle-dark" class="btn btn-outline-light ms-auto">Modo escuro 🌒</button>
+      </div>
+    </div>
+  </nav>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav text-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="paginas/potencia.html">Calcular Potência</a></li>
-        <li class="nav-item"><a class="nav-link" href="paginas/conta.html">Calcular Conta</a></li>
-        <li class="nav-item"><a class="nav-link" href="paginas/sobre.html">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="paginas/contato.html">Contato</a></li>
-      </ul>
+  <!-- Conteúdo -->
+  <di class="container mt-5 pt-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4">Bem-vindo ao EcoEnergia</h1>
+      <p class="lead">
+        Descubra quanto seus aparelhos consomem e simule o valor da conta de energia com praticidade.
+      </p>
     </div>
-    <div class="d-none d-lg-block">
-      <button id="toggle-dark" class="btn btn-outline-light ms-auto">Modo escuro 🌒</button>
-    </div>
-  </div>
-</nav>
-  <div class="container" style="margin-top: 100px;">
-  <header class="text-center my-5">
-    <h1 class="display-4">Bem-vindo ao EcoEnergia</h1>
-    <p class="lead">Calcule o consumo de energia dos seus eletrodomésticos de forma simples.</p>
-    <a href="potencia.html" class="btn btn-success mt-3">Começar</a>
-  </header>
-  <footer class="text-center py-3 bg-light">
-    <p class="mb-0">&copy; 2025 EcoEnergia - Cleidson Danilo</p>
+    <section class="row justify-content-center mb-5">
+      <!-- Card 1 - Calcular Potência -->
+      <div class="col-md-5 col-lg-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div style="position:relative; width:100%; height:200px;">
+            <img src="imagem/soquete.png" class="card-img-top" alt="Imagem estática de consumo elétrico">
+            <img src="imagem/soquete.gif" class="gif-hover" alt="GIF ilustrativo de consumo elétrico">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-success">Calcular Potência</h5>
+            <p class="card-text">Descubra o consumo de energia de aparelhos elétricos com base em sua potência (Watts) e tempo de uso diário.</p>
+            <a href="paginas/potencia.html" class="btn btn-outline-success w-100">Acessar ferramenta</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 - Calcular Conta -->
+      <div class="col-md-5 col-lg-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div style="position:relative; width:100%; height:200px;">
+            <img src="imagem/contabilidade.png" class="card-img-top" alt="Imagem estática de contabilidade">
+            <img src="imagem/contabilidade.gif" class="gif-hover" alt="GIF ilustrativo de contabilidade">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-success">Calcular Conta</h5>
+            <p class="card-text">Simule sua conta de energia elétrica mensal com base no consumo estimado e valor do kWh na sua região.</p>
+            <a href="paginas/conta.html" class="btn btn-outline-success w-100">Simular consumo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+
+  <!-- Rodapé -->
+  <footer class="text-center py-4 bg-light mt-5">
+    <p class="mb-0">&copy; 2025 EcoEnergia - Todos os direitos reservados.</p>
+    <p class="mb-0">Desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 2.0</p>
   </footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Função de modo escuro universal
+    document.addEventListener('DOMContentLoaded', function () {
+      const btnToggle = document.getElementById('toggle-dark');
+      if (btnToggle) {
+        btnToggle.addEventListener('click', function () {
+          const isDark = document.body.classList.toggle('dark');
+          btnToggle.textContent = isDark ? 'Modo claro 🌔' : 'Modo escuro 🌒';
+          localStorage.setItem('modoEscuro', isDark);
+        });
+        const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
+        if (modoSalvo) {
+          document.body.classList.add('dark');
+          btnToggle.textContent = 'Modo claro 🌔';
+        } else {
+          btnToggle.textContent = 'Modo escuro 🌒';
+        }
+      }
+    });
+  </script>
 </body>
 </html>

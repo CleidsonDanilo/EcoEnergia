@@ -1,0 +1,147 @@
+/* BOTÃO DE TOGGLE */
+#toggle-dark {
+  background: transparent;
+  border: none;
+  color: #fcfcfc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+#toggle-dark:hover {
+  background: #333;
+  color: #ffffff;
+}
+
+body.dark #toggle-dark {
+  background-color: transparent;
+  border: none;
+  color: #cde7e5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body.dark #toggle-dark:hover {
+  background-color: #333;
+  color: #74d8d3;
+}
+
+/* MODO ESCURO: GERAL */
+body.dark {
+  background: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.dark .container {
+  background: transparent;
+  box-shadow: none;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h4,
+body.dark h5 {
+  color: #00bfa6 !important;
+}
+
+body.dark .container p {
+  color: #cde7e5;
+}
+
+body.dark .container p strong {
+  color: #74d8d3;
+}
+
+/* MODO ESCURO: FORMULÁRIO */
+body.dark input,
+body.dark textarea {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #aaa;
+}
+
+body.dark input:focus,
+body.dark textarea:focus {
+  background-color: #3a3a3a;
+  border-color: #74d8d3;
+  color: #fff;
+}
+
+body.dark .btn-success {
+  background-color: #00978f;
+  border: none;
+}
+
+body.dark .btn-success:hover {
+  background-color: #00bfa6;
+}
+
+/* MODO ESCURO: CARDS */
+body.dark .card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #f0f0f0;
+}
+
+body.dark .card a {
+  color: #74d8d3;
+  text-decoration: none;
+}
+
+body.dark .card a:hover {
+  text-decoration: underline;
+}
+
+/* MODO ESCURO: RESULTADO */
+body.dark #resultado {
+  margin-top: 20px;
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cde7e5;
+  color: #cde7e5;
+  font-size: 16px;
+}
+
+/* MODO ESCURO: NAVBAR */
+body.dark .navbar {
+  background-color: #1b1b1b !important;
+  border-color: #333;
+  transition: background 0.3s;
+  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+}
+
+body.dark .navbar-brand {
+  color: #74d8d3 !important;
+}
+
+body.dark .nav-link {
+  color: #bebcbc !important;
+}
+
+body.dark .nav-link:hover {
+  color: #ffffff !important;
+}
+
+body.dark .nav-link.active {
+  color: #00bfa6 !important;
+}
+
+/* FOOTER (se houver no futuro) */
+body.dark footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  margin-top: 50px;
+}
