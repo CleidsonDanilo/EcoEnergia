@@ -46,8 +46,6 @@ body.dark .navbar-nav .nav-link.active{
   color: #00978f !important;
 }
 
-
-
 body.dark .btn:hover {
   background-color: #333;
 }
@@ -59,5 +57,35 @@ body.dark .modal-content {
 
 body.dark .form-text {
   color: #65b9b5;
+}
+
+/* BOTÃO DE TOGGLE (hover igual index) */
+#toggle-dark {
+  background: transparent;
+  border: none;
+  color: #fcfcfc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+#toggle-dark:hover {
+  background: #333;
+  color: #fff;
+}
+body.dark #toggle-dark {
+  background-color: transparent;
+  border: none;
+  color: #cde7e5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body.dark #toggle-dark:hover {
+  background-color: #333;
+  color: #74d8d3;
 }
 
