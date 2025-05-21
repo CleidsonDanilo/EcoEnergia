@@ -169,12 +169,6 @@
     document.getElementById('estado').selectedIndex = 0;
     document.getElementById('tarifa').value = estados[document.getElementById('estado').value];
 
-    const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
-    if (modoSalvo) {
-      document.body.classList.add('dark');
-      document.getElementById('toggle-dark').textContent = 'Modo claro 🌔';
-    }
-
     // Limpa o resultado ao abrir a página
     var resultado = document.getElementById('resultado');
     if (resultado) resultado.innerHTML = '';
