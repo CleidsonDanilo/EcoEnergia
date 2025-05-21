@@ -33,6 +33,10 @@ body.dark .navbar {
   background-color: #1b1b1b !important;
 }
 
+body.dark .navbar-brand {
+  color: #74d8d3 !important;
+}
+
 body.dark .navbar .nav-link {
   color: #969595 !important;
 }

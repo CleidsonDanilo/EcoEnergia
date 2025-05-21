@@ -87,6 +87,10 @@ body.dark .navbar {
   transition: background 0.3s;
 }
 
+body.dark .navbar-brand {
+  color: #74d8d3 !important;
+}
+
 body.dark .navbar .nav-link {
   color: #fdfcfc !important;
 }

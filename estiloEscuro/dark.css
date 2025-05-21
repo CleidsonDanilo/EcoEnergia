@@ -113,7 +113,9 @@ body.dark .menu-toggle {
   color: #74d8d3; /* Cor do botão de menu no modo escuro */
 }
 
-
+body.dark .navbar-brand {
+  color: #74d8d3 !important;
+}
 
 body.dark .nav-links a {
   color: #cde7e5; /* Cor dos links no modo escuro */
