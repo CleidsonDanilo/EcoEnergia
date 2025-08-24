@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoEnergia - Dicas</title>
+  <link rel="stylesheet" href="../estiloEscuro/dark.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="../imagem/favicon.ico">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      flex: 1 0 auto;
+    }
+    footer {
+      flex-shrink: 0;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('../imagem/dicas-energia.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    /* Cards */
+    .card {
+      transition: transform 0.2s;
+      border: none;
+      border-radius: 16px;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-lightning-charge"></i> EcoEnergia</a>
+      <div class="ms-auto d-flex align-items-center order-lg-2">
+        <button id="toggle-dark" class="btn btn-dark me-2" title="Alternar modo escuro">
+          <i id="icon-modo" class="bi bi-moon-fill"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-center order-lg-1" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/potencia.html">Calcular Potência</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/conta.html">Calcular Conta</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../paginas/dicas.html">Dicas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="../paginas/contato.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero mt-5 pt-5">
+    <h1>Dicas para Economia de Energia</h1>
+    <p>Pequenas atitudes fazem grande diferença para sua conta e para o planeta.</p>
+  </section>
+
+  <!-- Cards de Dicas -->
+  <div class="container my-5">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-lightbulb text-warning"></i>
+          <h5>Iluminação Inteligente</h5>
+          <p>Prefira lâmpadas LED e aproveite a luz natural. Instale sensores de presença em áreas comuns.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-power text-success"></i>
+          <h5>Desligue Aparelhos</h5>
+          <p>Retire os aparelhos da tomada quando não estiver usando. Evite o modo stand-by.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-award text-primary"></i>
+          <h5>Eletrodomésticos Eficientes</h5>
+          <p>Dê preferência a produtos com selo Procel e utilize sempre o modo econômico.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-wind text-info"></i>
+          <h5>Climatização Consciente</h5>
+          <p>Evite portas e janelas abertas com o ar-condicionado ligado. Limpe os filtros regularmente.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-droplet text-primary"></i>
+          <h5>Banho Econômico</h5>
+          <p>Evite banhos longos e muito quentes. Prefira horários de menor demanda.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 p-4">
+          <i class="bi bi-brightness-high text-warning"></i>
+          <h5>Aproveite a Luz Natural</h5>
+          <p>Mantenha cortinas abertas durante o dia e reduza o uso de lâmpadas artificiais.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Referências -->
+    <div class="card shadow-lg border-0 mt-5 p-4">
+      <h5><i class="bi bi-link-45deg me-2"></i>Referências e Links Úteis</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a href="https://www.aneel.gov.br/" target="_blank" class="text-success">ANEEL - Agência Nacional de Energia Elétrica</a></li>
+        <li><a href="https://www.epe.gov.br/pt" target="_blank" class="text-success">EPE - Dicas de Economia de Energia</a></li>
+        <li><a href="https://www.cpfl.com.br/informacoes-uteis" target="_blank" class="text-success">CPFL - Dicas de Economia</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="text-center py-4 bg-light mt-5">
+    <p class="mb-1">&copy; 2025 EcoEnergia - Todos os direitos reservados.</p>
+    <p class="mb-1">Desenvolvido por <strong>Cleidson Danilo</strong> | Versão oficial 2.1</p>
+    <a href="../paginas/contato.html" class="text-success"><i class="bi bi-envelope"></i> Fale conosco</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btnToggle = document.getElementById('toggle-dark');
+      const icon = document.getElementById('icon-modo');
+
+      if (btnToggle && icon) {
+        btnToggle.addEventListener('click', function () {
+          const isDark = document.body.classList.toggle('dark');
+          localStorage.setItem('modoEscuro', isDark);
+          icon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+        });
+
+        const modoSalvo = localStorage.getItem('modoEscuro') === 'true';
+        if (modoSalvo) {
+          document.body.classList.add('dark');
+          icon.className = 'bi bi-sun-fill';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
